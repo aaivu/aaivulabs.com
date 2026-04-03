@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Design source files
+*.ai
+*.psd
+*.zip
+
+# Editor
+.vscode/
+.idea/
+
+# Claude
+.claude/
+
+# Legacy/unused files
+SKILL.md.md
+info.txt
+logos/

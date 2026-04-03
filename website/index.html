@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaivu Labs — AI Research & Innovation</title>
+    <meta name="description" content="Aaivu Labs conducts research and development in Artificial Intelligence, Machine Learning, Data Science, and emerging technologies.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#f47d20',
+                        'accent-dark': '#d96a10',
+                        'accent-light': '#fef5ec',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in.show { opacity: 1; transform: translateY(0); }
+        .mobile-nav { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-nav.open { transform: translateX(0); }
+    </style>
+</head>
+<body class="bg-white text-gray-700 font-sans antialiased">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+            <a href="#"><img src="assets/logo.png" alt="Aaivu Labs" class="h-8"></a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-[13px] font-medium text-gray-500 hover:text-gray-900 transition-colors">About</a>
+                <a href="#services" class="text-[13px] font-medium text-gray-500 hover:text-gray-900 transition-colors">Services</a>
+                <a href="#why-us" class="text-[13px] font-medium text-gray-500 hover:text-gray-900 transition-colors">Why Us</a>
+                <a href="#contact" class="text-[13px] font-medium text-gray-500 hover:text-gray-900 transition-colors">Contact</a>
+                <a href="#contact" class="bg-accent text-white text-[13px] font-semibold px-5 py-2 rounded-lg hover:bg-accent-dark transition-colors">Get in Touch</a>
+            </div>
+            <button id="menuBtn" class="md:hidden p-2" aria-label="Menu">
+                <span class="block w-5 h-0.5 bg-gray-800 mb-1 transition-all" id="l1"></span>
+                <span class="block w-5 h-0.5 bg-gray-800 mb-1 transition-all" id="l2"></span>
+                <span class="block w-5 h-0.5 bg-gray-800 transition-all" id="l3"></span>
+            </button>
+        </div>
+        <div id="mobileNav" class="mobile-nav fixed inset-0 top-16 bg-white z-40 flex flex-col items-center pt-20 gap-8">
+            <a href="#about" class="mob-link text-lg text-gray-700 font-medium">About</a>
+            <a href="#services" class="mob-link text-lg text-gray-700 font-medium">Services</a>
+            <a href="#why-us" class="mob-link text-lg text-gray-700 font-medium">Why Us</a>
+            <a href="#contact" class="mob-link text-lg text-gray-700 font-medium">Contact</a>
+            <a href="#contact" class="mob-link mt-2 bg-accent text-white font-semibold px-8 py-3 rounded-lg text-base">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="fade-in">
+                    <span class="inline-block bg-accent-light text-accent text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full mb-6">AI Research & Innovation</span>
+                </div>
+                <h1 class="fade-in text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-gray-900 leading-[1.12] mb-5">
+                    Building the Future with <span class="text-accent">Intelligent</span> Systems
+                </h1>
+                <p class="fade-in text-base sm:text-lg text-gray-500 leading-relaxed max-w-lg mx-auto mb-9">
+                    We design, develop, and deploy AI-driven solutions that transform enterprises, governments, and institutions through cutting-edge research.
+                </p>
+                <div class="fade-in flex flex-wrap justify-center gap-3">
+                    <a href="#services" class="bg-accent text-white font-semibold text-sm px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors inline-flex items-center gap-2">
+                        <i class="fa-solid fa-rocket text-[11px]"></i> Explore Services
+                    </a>
+                    <a href="#contact" class="border border-gray-200 text-gray-700 font-semibold text-sm px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors inline-flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-[11px]"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trusted indicators -->
+            <div class="fade-in mt-20 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center py-5 px-4 rounded-xl bg-gray-50">
+                    <p class="text-xl font-bold text-gray-900 tracking-tight">AI / ML</p>
+                    <p class="text-xs text-gray-400 mt-1">Research & Development</p>
+                </div>
+                <div class="text-center py-5 px-4 rounded-xl bg-gray-50">
+                    <p class="text-xl font-bold text-gray-900 tracking-tight">NLP</p>
+                    <p class="text-xs text-gray-400 mt-1">Language Technologies</p>
+                </div>
+                <div class="text-center py-5 px-4 rounded-xl bg-gray-50">
+                    <p class="text-xl font-bold text-gray-900 tracking-tight">Data</p>
+                    <p class="text-xs text-gray-400 mt-1">Science & Analytics</p>
+                </div>
+                <div class="text-center py-5 px-4 rounded-xl bg-gray-50">
+                    <p class="text-xl font-bold text-gray-900 tracking-tight">EDU</p>
+                    <p class="text-xs text-gray-400 mt-1">Training & Workshops</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 sm:py-32 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+                <div class="fade-in">
+                    <p class="text-accent font-semibold text-xs tracking-wide uppercase mb-3">Who We Are</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight mb-5">
+                        Pioneering AI Solutions for a Smarter Tomorrow
+                    </h2>
+                    <p class="text-gray-500 leading-7 mb-4">
+                        Aaivu Labs is an AI research and development company committed to building intelligent systems that solve real-world problems. We work at the intersection of academic research and industry application.
+                    </p>
+                    <p class="text-gray-500 leading-7 mb-8">
+                        From multilingual NLP systems to enterprise-grade AI platforms, we collaborate with academic institutions, research organizations, and industry partners to drive innovation and digital transformation.
+                    </p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-3">
+                        <span class="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                            <i class="fa-solid fa-circle-check text-accent text-xs"></i> Research-Driven
+                        </span>
+                        <span class="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                            <i class="fa-solid fa-circle-check text-accent text-xs"></i> Industry-Ready
+                        </span>
+                        <span class="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                            <i class="fa-solid fa-circle-check text-accent text-xs"></i> Innovation-Led
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bento capability cards -->
+                <div class="fade-in grid grid-cols-2 gap-3">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100">
+                        <div class="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-brain text-accent text-sm"></i>
+                        </div>
+                        <p class="font-semibold text-gray-900 text-sm mb-1">Deep Learning</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Neural network research & deployment</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100">
+                        <div class="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-language text-accent text-sm"></i>
+                        </div>
+                        <p class="font-semibold text-gray-900 text-sm mb-1">Multilingual AI</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">NLP & speech technologies</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100">
+                        <div class="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-chart-line text-accent text-sm"></i>
+                        </div>
+                        <p class="font-semibold text-gray-900 text-sm mb-1">Data Science</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Analytics & intelligent insights</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100">
+                        <div class="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-graduation-cap text-accent text-sm"></i>
+                        </div>
+                        <p class="font-semibold text-gray-900 text-sm mb-1">AI Training</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Workshops & education programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 sm:py-32">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-xl mx-auto text-center mb-14 fade-in">
+                <p class="text-accent font-semibold text-xs tracking-wide uppercase mb-3">What We Do</p>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight mb-4">Our Core Services</h2>
+                <p class="text-gray-500 text-[15px] leading-relaxed">End-to-end AI capabilities — from foundational research to production-grade deployment.</p>
+            </div>
+
+            <!-- Bento grid services -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Featured card -->
+                <div class="fade-in md:col-span-2 lg:col-span-2 bg-gray-900 text-white rounded-2xl p-8 sm:p-10 flex flex-col justify-between min-h-[240px]">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-flask text-white text-sm"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI Research & Development</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                            Conducting cutting-edge research in AI, Machine Learning, and Data Science to push the boundaries of what's possible with intelligent systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fade-in bg-white border border-gray-100 rounded-2xl p-7 min-h-[240px] flex flex-col">
+                    <div class="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-microchip text-accent text-sm"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-2">Software Platforms & Solutions</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Designing, developing, and deploying AI-driven software systems and platforms for enterprises, governments, and institutions.
+                    </p>
+                </div>
+
+                <div class="fade-in bg-white border border-gray-100 rounded-2xl p-7 min-h-[200px] flex flex-col">
+                    <div class="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-lightbulb text-accent text-sm"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-2">AI Consultancy</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Expert consultancy in AI, Data Analytics, Digital Transformation, and emerging technologies to guide your strategic vision.
+                    </p>
+                </div>
+
+                <div class="fade-in bg-white border border-gray-100 rounded-2xl p-7 min-h-[200px] flex flex-col">
+                    <div class="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-chalkboard-user text-accent text-sm"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-2">Training & Education</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Comprehensive training programs, workshops, and seminars in AI, Data Science, and computing fields.
+                    </p>
+                </div>
+
+                <!-- Featured card -->
+                <div class="fade-in md:col-span-2 lg:col-span-1 bg-accent-light rounded-2xl p-7 min-h-[200px] flex flex-col border border-orange-100">
+                    <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-comments text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-2">Multilingual AI Systems</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Developing advanced NLP, speech technologies, and knowledge-based systems that work across languages and cultures.
+                    </p>
+                </div>
+
+                <div class="fade-in md:col-span-2 lg:col-span-3 bg-gray-50 rounded-2xl p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-handshake text-accent text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Academic Collaboration</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Partnering with academic institutions, research organizations, and industry leaders to foster innovation and advance technology development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="py-24 sm:py-32 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+                <div class="lg:col-span-2 fade-in lg:sticky lg:top-24">
+                    <p class="text-accent font-semibold text-xs tracking-wide uppercase mb-3">Why Aaivu Labs</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight mb-5">
+                        Where Research Meets Real Impact
+                    </h2>
+                    <p class="text-gray-500 leading-7 mb-8">
+                        We don't just build AI — we advance the science behind it. Every solution we deliver is backed by rigorous research and proven methodology.
+                    </p>
+                    <a href="#contact" class="bg-accent text-white font-semibold text-sm px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors inline-flex items-center gap-2">
+                        Partner With Us <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3 fade-in">
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex gap-4 items-start">
+                        <div class="shrink-0 w-9 h-9 rounded-lg bg-accent text-white flex items-center justify-center text-xs font-bold">01</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 text-[15px] mb-1">Research-First Approach</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Every solution is grounded in rigorous scientific research, ensuring robust and state-of-the-art implementations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex gap-4 items-start">
+                        <div class="shrink-0 w-9 h-9 rounded-lg bg-gray-800 text-white flex items-center justify-center text-xs font-bold">02</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 text-[15px] mb-1">Cross-Domain Expertise</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Deep expertise spanning AI, machine learning, NLP, data science, and digital transformation.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex gap-4 items-start">
+                        <div class="shrink-0 w-9 h-9 rounded-lg bg-gray-700 text-white flex items-center justify-center text-xs font-bold">03</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 text-[15px] mb-1">End-to-End Delivery</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">From concept and research through development to deployment and maintenance — complete, production-grade solutions.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex gap-4 items-start">
+                        <div class="shrink-0 w-9 h-9 rounded-lg bg-gray-900 text-white flex items-center justify-center text-xs font-bold">04</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 text-[15px] mb-1">Collaborative Innovation</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Building bridges between academia and industry, turning theoretical advances into practical applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 sm:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in bg-gray-900 rounded-2xl p-10 sm:p-14 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">Ready to transform your business with AI?</h2>
+                <p class="text-gray-400 text-sm sm:text-base max-w-md mx-auto mb-8">Let's discuss how we can help you leverage artificial intelligence to solve your most complex challenges.</p>
+                <a href="#contact" class="bg-accent text-white font-semibold text-sm px-7 py-3 rounded-lg hover:bg-accent-dark transition-colors inline-flex items-center gap-2">
+                    Start a Conversation <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 sm:py-32 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-xl mx-auto text-center mb-14 fade-in">
+                <p class="text-accent font-semibold text-xs tracking-wide uppercase mb-3">Get In Touch</p>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
+                    Let's Build Something Together
+                </h2>
+                <p class="text-gray-500 text-[15px] leading-relaxed">
+                    Whether you're looking for AI research partnerships, custom solutions, or expert consultancy — we'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="fade-in max-w-2xl mx-auto bg-white border border-gray-100 rounded-2xl p-8 sm:p-10">
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <a href="mailto:rtuthaya@gmail.com" class="flex items-center gap-4 hover:opacity-70 transition-opacity">
+                        <div class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-envelope text-gray-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-[13px] font-semibold text-gray-900 tracking-tight">Email</p>
+                            <p class="text-[13px] text-gray-400">rtuthaya@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/aaivu" target="_blank" class="flex items-center gap-4 hover:opacity-70 transition-opacity">
+                        <div class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center shrink-0">
+                            <i class="fa-brands fa-github text-gray-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-[13px] font-semibold text-gray-900 tracking-tight">GitHub</p>
+                            <p class="text-[13px] text-gray-400">github.com/aaivu</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/aaivu" target="_blank" class="flex items-center gap-4 hover:opacity-70 transition-opacity">
+                        <div class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center shrink-0">
+                            <i class="fa-brands fa-linkedin-in text-gray-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-[13px] font-semibold text-gray-900 tracking-tight">LinkedIn</p>
+                            <p class="text-[13px] text-gray-400">linkedin.com/company/aaivu</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-location-dot text-gray-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-[13px] font-semibold text-gray-900 tracking-tight">Location</p>
+                            <p class="text-[13px] text-gray-400">Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6 py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div class="sm:col-span-2 lg:col-span-2">
+                    <img src="assets/logo.png" alt="Aaivu Labs" class="h-7 mb-4 brightness-0 invert opacity-70">
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
+                        Pioneering AI research and innovation. Building intelligent systems that transform how the world works.
+                    </p>
+                    <div class="flex gap-2">
+                        <a href="https://www.linkedin.com/company/aaivu" target="_blank" class="w-8 h-8 rounded-md bg-white/5 flex items-center justify-center text-gray-500 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="https://github.com/aaivu" target="_blank" class="w-8 h-8 rounded-md bg-white/5 flex items-center justify-center text-gray-500 hover:text-white transition-colors" aria-label="GitHub">
+                            <i class="fa-brands fa-github text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-xs tracking-wide uppercase mb-4">Company</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#about" class="text-gray-500 text-sm hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="text-gray-500 text-sm hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="text-gray-500 text-sm hover:text-white transition-colors">Why Us</a></li>
+                        <li><a href="#contact" class="text-gray-500 text-sm hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-xs tracking-wide uppercase mb-4">Services</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#services" class="text-gray-500 text-sm hover:text-white transition-colors">AI Research</a></li>
+                        <li><a href="#services" class="text-gray-500 text-sm hover:text-white transition-colors">ML Solutions</a></li>
+                        <li><a href="#services" class="text-gray-500 text-sm hover:text-white transition-colors">Consultancy</a></li>
+                        <li><a href="#services" class="text-gray-500 text-sm hover:text-white transition-colors">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-gray-600 text-xs">&copy; 2026 Aaivu Labs. All rights reserved.</p>
+                <div class="flex gap-5">
+                    <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        let open = false;
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+            mobileNav.classList.toggle('open', open);
+            document.getElementById('l1').style.transform = open ? 'rotate(45deg) translate(3px,4px)' : '';
+            document.getElementById('l2').style.opacity = open ? '0' : '1';
+            document.getElementById('l3').style.transform = open ? 'rotate(-45deg) translate(3px,-4px)' : '';
+        });
+        document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
+            open = false;
+            mobileNav.classList.remove('open');
+            document.getElementById('l1').style.transform = '';
+            document.getElementById('l2').style.opacity = '1';
+            document.getElementById('l3').style.transform = '';
+        }));
+    </script>
+</body>
+</html>
