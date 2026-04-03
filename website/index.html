@@ -41,7 +41,7 @@
 <body class="bg-white text-gray-700 font-sans antialiased">
 
     <!-- Nav -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100 transition-colors">
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
             <a href="#"><img src="assets/logo.png" alt="Aaivu Labs" class="h-8"></a>
             <div class="hidden md:flex items-center gap-8">
@@ -57,7 +57,7 @@
                 <span class="block w-5 h-0.5 bg-gray-800 transition-all" id="l3"></span>
             </button>
         </div>
-        <div id="mobileNav" class="mobile-nav fixed inset-0 top-16 bg-white z-40 flex flex-col items-center pt-20 gap-8">
+        <div id="mobileNav" class="mobile-nav fixed inset-0 top-16 bg-white z-[999] flex flex-col items-center pt-20 gap-8">
             <a href="#about" class="mob-link text-lg text-gray-700 font-medium">About</a>
             <a href="#services" class="mob-link text-lg text-gray-700 font-medium">Services</a>
             <a href="#why-us" class="mob-link text-lg text-gray-700 font-medium">Why Us</a>
@@ -432,21 +432,19 @@
 
         const menuBtn = document.getElementById('menuBtn');
         const mobileNav = document.getElementById('mobileNav');
+        const navbar = document.getElementById('navbar');
         let open = false;
-        menuBtn.addEventListener('click', () => {
-            open = !open;
+        function toggleMenu(state) {
+            open = state;
             mobileNav.classList.toggle('open', open);
+            navbar.classList.toggle('bg-white/80', !open);
+            navbar.classList.toggle('bg-white', open);
             document.getElementById('l1').style.transform = open ? 'rotate(45deg) translate(3px,4px)' : '';
             document.getElementById('l2').style.opacity = open ? '0' : '1';
             document.getElementById('l3').style.transform = open ? 'rotate(-45deg) translate(3px,-4px)' : '';
-        });
-        document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
-            open = false;
-            mobileNav.classList.remove('open');
-            document.getElementById('l1').style.transform = '';
-            document.getElementById('l2').style.opacity = '1';
-            document.getElementById('l3').style.transform = '';
-        }));
+        }
+        menuBtn.addEventListener('click', () => toggleMenu(!open));
+        document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
     </script>
 </body>
 </html>
