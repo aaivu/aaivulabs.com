@@ -439,9 +439,9 @@
             mobileNav.classList.toggle('open', open);
             navbar.classList.toggle('bg-white/80', !open);
             navbar.classList.toggle('bg-white', open);
-            document.getElementById('l1').style.transform = open ? 'rotate(45deg) translate(3px,4px)' : '';
+            document.getElementById('l1').style.transform = open ? 'rotate(45deg) translate(0,6px)' : '';
             document.getElementById('l2').style.opacity = open ? '0' : '1';
-            document.getElementById('l3').style.transform = open ? 'rotate(-45deg) translate(3px,-4px)' : '';
+            document.getElementById('l3').style.transform = open ? 'rotate(-45deg) translate(0,-6px)' : '';
         }
         menuBtn.addEventListener('click', () => toggleMenu(!open));
         document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
